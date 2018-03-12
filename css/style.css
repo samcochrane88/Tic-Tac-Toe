@@ -1,0 +1,63 @@
+body {
+			font-family: 'Raleway', sans-serif;
+			font-weight: 400;
+			font-size: 12px;
+		}
+.container {
+			max-width: 400px;
+			margin: 2em auto;
+			text-align: center;
+			line-height: 1.5;
+		}
+
+h1 {
+			text-align: center;
+		}
+
+a {
+			text-decoration: none;
+			color: pink;
+			font-weight: 700;
+		}
+
+		}
+.button {
+			width: 90px;
+			height: 15px;
+			border-radius: 5px;
+			padding: 5px;
+			margin: 0 auto;
+			cursor: pointer;
+			text-align: center;
+			background-color: pink;
+			font-size: 13px;
+			color: #fff;
+		}
+.tic-tac-toe {
+			width: 315px;
+			height: auto;
+			margin: 0 auto;
+		}
+.tile {
+			height: 100px;
+			width: 100px;
+			display: inline-block;
+			cursor: pointer;
+			position: relative;
+			vertical-align: top;
+			padding: 15px;
+			margin-bottom: 5px;
+			box-sizing: border-box;
+			color: #fff;
+			font-size: 60px;
+			text-align: center;
+		}
+.free {
+			background-color: #999;
+		}
+.O-play {
+			background-color: blue;
+		}
+.X-play {
+			background-color: red;
+		}
