@@ -15,6 +15,9 @@ for (i = 0; i <= 2; i++) {
   // check if the tile has the class of X-play and the ID we asked for
 }
 // if idsToCheckX is 3 then we have a winner
+if ($('idsToCheckX').hasClass('X-play')){
+
+}
 
 // check the y line next, x is constant
 // let idsToCheckY = [];
@@ -305,7 +308,9 @@ $('.tile').on('click', function Xplay() {
 		$(this).addClass('X-play');
 		$(this).html("X");
 
-		checkDraw();
+console.log(this);
+
+    checkDraw();
 		checkWin();
 		Oplay();
 
