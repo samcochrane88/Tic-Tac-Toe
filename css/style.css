@@ -92,8 +92,8 @@ body {
 		}
 
 		.button {
-			width: 90px;
-			height: 15px;
+			width: 200px;
+			height: 30;
 			border-radius: 5px;
 			padding: 5px;
 			margin: 0 auto;
@@ -101,7 +101,7 @@ body {
 			cursor: pointer;
 			text-align: center;
 
-			background-color: pink;
+			background-color: blue;
 			font-size: 13px;
 			color: #fff;
 		}
@@ -143,3 +143,8 @@ body {
 		.X-play {
 			background-color: red;
 		}
+
+
+#winMessage {
+	display: none;
+}

@@ -1,53 +1,17 @@
 $(document).ready(function() {
 
-$('.tile').click(function(event){
-// check the x line first, y is constant
-// create a list of ids like this
-let idsToCheckX = [];
-for (i = 0; i <= 2; i++) {
-  let id = `${i}${event.currentTarget.id[1]}`
-  console.log(id)
-  let tile = $(`#${id}`);
-  //to do
-
-  console.log('tile is', tile)
-
-  // check if the tile has the class of X-play and the ID we asked for
-}
-// if idsToCheckX is 3 then we have a winner
-if ($('idsToCheckX').hasClass('X-play')){
-
-}
-
-// check the y line next, x is constant
-// let idsToCheckY = [];
-// for (i = 0; i <= 2; i++) {
-//   let id = `${event.currentTarget.id[0]}${i}`
-//   let tile = $(`#${id}`);
-//   console.log('tile is', tile)
-//
-// }
-// check if the tile has the class of X-play and the ID we asked for
-// if idsToCheckY is 3 then we have a winner
-
-// check the diagonal, the values of x === y for each of the coordinates
-})
-
-
-const sq1 = $('#square00');
-const sq2 = $('#square01');
-const sq3 = $('#square02');
-const sq4 = $('#square10');
-const sq5 = $('#square11');
-const sq6 = $('#square12');
-const sq7 = $('#square20');
-const sq8 = $('#square21');
-const sq9 = $('#square22');
+const sq1 = $('#square1');
+const sq2 = $('#square2');
+const sq3 = $('#square3');
+const sq4 = $('#square4');
+const sq5 = $('#square5');
+const sq6 = $('#square6');
+const sq7 = $('#square7');
+const sq8 = $('#square8');
+const sq9 = $('#square9');
 
 let playValid = false;
 let win = false;
-
-
 
 function validatePlay(squareplayed) {
 	if ( $(squareplayed).hasClass('free') ) {
@@ -68,13 +32,12 @@ function clearBoard() {
 
 function winAlert(player) {
 	win = true;
-
-	if (player == "X") {
-		alert("Congratulations, you beat the computer!")
+	if (player === "X") {
+		$("#winMessage").show();
+		//alert("Congratulations, you beat the computer!")
 	} else {
 		alert("You lost!")
 	}
-	clearBoard();
 }
 
 function checkWin() {
@@ -129,15 +92,10 @@ function checkWin() {
 }
 
 function checkDraw() {
-
 	if ( !($('.tile').hasClass('free')) ) {
-		alert("Draw! Try playing again!");
-		clearBoard();
+			alert("Draw! Try playing again!");
 	}
 }
-
-
-
 
 function Oplay() {
 
@@ -151,10 +109,7 @@ function Oplay() {
 			square.addClass('played');
 			square.addClass('O-play');
 			square.html("O");
-		} else {
-			Orandomplay()
 		}
-
 	}
 
 	// Function for when O plays randomly
@@ -165,7 +120,6 @@ function Oplay() {
 			const randomNumber = Math.floor((Math.random() * 9) + 1);
 			const randomSquare = $('#square'+randomNumber);
 			validatePlay(randomSquare);
-
 			if (playValid) {
 
 				randomSquare.removeClass('free');
@@ -294,31 +248,26 @@ function Oplay() {
 	checkWin();
 }
 
-
-
-
-
 $('.tile').on('click', function Xplay() {
+  if ($(this).html() === 'X' || $(this).html() === 'O' ) {
+    alert('Square has already been played')
+    return
 
-	validatePlay(this);
+}
 
-	if (playValid) {
-		$(this).removeClass('free');
-		$(this).addClass('played');
-		$(this).addClass('X-play');
-		$(this).html("X");
+    $(this).removeClass('free');
+    $(this).addClass('played');
+    $(this).addClass('X-play');
+    $(this).html("X");
 
-console.log(this);
 
-    checkDraw();
-		checkWin();
-		Oplay();
+			Oplay();
 
-	} else {
-		alert("That square has already been played. Please choose another square");
-	}
+	});
 
-})
+
+
+
 
 $('#reset-button').on('click', function() {
 	clearBoard();

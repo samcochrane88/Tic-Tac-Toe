@@ -1,38 +1,3 @@
-<!-- <!DOCTYPE html>
-<html>
-  <head>
-
-    <meta charset="utf-8">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
-    <link rel="stylesheet" href="css/style.css">
-    <script type="text/javascript" src="/Users/samcochrane/Projects/project0/js/game.js"></script>
-
-  <title>Tic Tac Toe</title>
-
-  </head>
-
-  <h1> Tic Tac Toe</h1>
-
-  <body>
-
-
-
-<div class="tic-tac-toe">
-    <div id="square1" class="tile free"></div>
-    <div id="square2" class="tile free"></div>
-    <div id="square3" class="tile free"></div>
-    <div id="square4" class="tile free"></div>
-    <div id="square5" class="tile free"></div>
-    <div id="square6" class="tile free"></div>
-    <div id="square7" class="tile free"></div>
-    <div id="square8" class="tile free"></div>
-    <div id="square9" class="tile free"></div>
-
-
-</div>
-
-  </body>
-</html> -->
 <!doctype html>
 <html>
 <head>
@@ -41,9 +6,10 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
-	<link href='http://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet'>
+
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script type="text/javascript" src="js/game.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
 
 
 </head>
@@ -58,22 +24,27 @@
 			You play as <span class="red">X</span> and the computer plays as <span class="blue">O</span><br/>
 			Start by choosing a square to play</p>
 
-
-		<div class="button" id="reset-button">Reset Board</div>
+		<div class="button" id="reset-button">Reset</div>
 
 	</div>
 
 	<div class="tic-tac-toe">
-		<div id="00" class="tile free"></div>
-		<div id="10" class="tile free"></div>
-		<div id="20" class="tile free"></div>
-		<div id="01" class="tile free"></div>
-		<div id="11" class="tile free"></div>
-		<div id="21" class="tile free"></div>
-		<div id="02" class="tile free"></div>
-		<div id="12" class="tile free"></div>
-		<div id="22" class="tile free"></div>
-	</div>
+	    <div id="square1" class="tile free"></div>
+	    <div id="square2" class="tile free"></div>
+	    <div id="square3" class="tile free"></div>
+	    <div id="square4" class="tile free"></div>
+	    <div id="square5" class="tile free"></div>
+	    <div id="square6" class="tile free"></div>
+	    <div id="square7" class="tile free"></div>
+	    <div id="square8" class="tile free"></div>
+	    <div id="square9" class="tile free"></div>
+</div>
+
+<div id='winMessage'>
+<p>
+	Winner X
+</p>
+</div>
 
 	<footer>
  </footer>
