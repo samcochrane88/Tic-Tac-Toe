@@ -90,25 +90,25 @@ span.pink {
 #winMessage {
 	display: none;
 	text-align: center;
-	font-size: 50px;
+	font-size: 20px;
 	color: blue;
 }
 
 #loseMessage{
 	display: none;
 	text-align: center;
-	font-size: 50px;
+	font-size: 20px;
 	color: red
 }
 
 #drawMessage{
 	display: none;
 	text-align: center;
-	font-size: 50px;
+	font-size: 20px;
 }
 
 #playedSquare{
 	display: none;
 	text-align: center;
-	font-size: 50px;
+	font-size: 20px;
 }

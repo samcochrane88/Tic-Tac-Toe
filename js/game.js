@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+//listeing squares
 const sq1 = $('#square1');
 const sq2 = $('#square2');
 const sq3 = $('#square3');
@@ -9,10 +9,12 @@ const sq6 = $('#square6');
 const sq7 = $('#square7');
 const sq8 = $('#square8');
 const sq9 = $('#square9');
-
+//play vaid is assigning a square
 let playValid = false;
+// winning will be true
 let win = false;
 
+// assigning a square X or O
 function validatePlay(squareplayed) {
 	if ( $(squareplayed).hasClass('free') ) {
 		playValid = true;
@@ -22,7 +24,7 @@ function validatePlay(squareplayed) {
 		return false;
 	}
 }
-
+// this will be to clear all squares
 function clearBoard() {
 	$('.tile').removeClass('played');
 	$('.tile').removeClass('O-play');
@@ -30,7 +32,7 @@ function clearBoard() {
 	$('.tile').html('');
 	$('.tile').addClass('free');
 }
-
+// this will show a message if X wins or if 0 wins
 function winAlert(player) {
 	win = true;
 	if (player === "X") {
@@ -41,6 +43,7 @@ function winAlert(player) {
 	}
 }
 
+//Check if X win or is O wins
 function checkWin() {
 
 	if ( sq1.hasClass('X-play') && sq2.hasClass('X-play') && sq3.hasClass('X-play') ) {
@@ -91,16 +94,17 @@ function checkWin() {
 		winAlert("O");
 	}
 }
-
+//No one wins, so a draw and will display a draw message
 function checkDraw() {
 	if ( !($('.tile').hasClass('free')) ) {
 			$("#drawMessage").show();
 	}
 }
 
+// this is the computer player funtions 
 function Oplay() {
 
-	// Function for when O plays tactically
+// Function for when O plays tactically
 	function Oplaying(square) {
 
 		validatePlay(square)
@@ -114,10 +118,10 @@ function Oplay() {
 		}
 	}
 
-	// Function for when O plays randomly
+// Function for when O plays randomly
 	function Orandomplay() {
 		for (let i = 0; i < 10; i++) {
-		// Loop to find a valid play
+// Loop to find a valid play
 
 			const randomNumber = Math.floor((Math.random() * 9) + 1);
 			const randomSquare = $('#square'+randomNumber);
@@ -250,6 +254,7 @@ function Oplay() {
 	checkWin();
 }
 
+//this is so that O will not play again if X is click on a played square and show a message that a played squaer have been clicked again
 $('.tile').on('click', function Xplay() {
   if ($(this).html() === 'X' || $(this).html() === 'O' ) {
 		$("#playedSquare").show();
@@ -270,7 +275,7 @@ $('.tile').on('click', function Xplay() {
 
 
 
-
+// reset button to start the game again
 $('#reset-button').on('click', function() {
 	clearBoard();
 	$("#winMessage").hide();

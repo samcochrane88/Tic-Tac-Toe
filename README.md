@@ -25,3 +25,13 @@ If you click the link below it will take to you a new tab where you will be able
 #### Built by
 
 Sam Cochrane
+
+#### Bugs
+
+* After the game finished if you keep clicking all win/lose/draw/same square clicked twice messages come up
+
+
+#### Projects
+
+* Need to make the code more automated in Oplay and checkWin instead of so much hardcoding
+* AI could be smarter
