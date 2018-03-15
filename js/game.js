@@ -1,5 +1,5 @@
 $(document).ready(function() {
-//listeing squares
+//listing squares
 const sq1 = $('#square1');
 const sq2 = $('#square2');
 const sq3 = $('#square3');
@@ -14,23 +14,28 @@ let playValid = false;
 // winning will be true
 let win = false;
 
-// assigning a square X or O
+// asking if we can play tile with X or O
 function validatePlay(squareplayed) {
 	if ( $(squareplayed).hasClass('free') ) {
 		playValid = true;
 		$("#playedSquare").hide();
+		$("#drawMessage").hide();
 	} else {
 		playValid = false;
 		return false;
 	}
 }
-// this will be to clear all squares
+// this will be to clear all squares and messages
 function clearBoard() {
 	$('.tile').removeClass('played');
 	$('.tile').removeClass('O-play');
 	$('.tile').removeClass('X-play');
 	$('.tile').html('');
 	$('.tile').addClass('free');
+	$("#winMessage").hide();
+	$("#loseMessage").hide();
+	$("#drawMessage").hide();
+	$("#playedSquare").hide();
 }
 // this will show a message if X wins or if 0 wins
 function winAlert(player) {
@@ -98,10 +103,11 @@ function checkWin() {
 function checkDraw() {
 	if ( !($('.tile').hasClass('free')) ) {
 			$("#drawMessage").show();
+			$("#playedSquare").hide();
 	}
 }
 
-// this is the computer player funtions 
+// this is the computer player funtions
 function Oplay() {
 
 // Function for when O plays tactically
@@ -258,32 +264,22 @@ function Oplay() {
 $('.tile').on('click', function Xplay() {
   if ($(this).html() === 'X' || $(this).html() === 'O' ) {
 		$("#playedSquare").show();
+		$("#winMessage").hide();
+		$("#loseMessage").hide();
+		$("#drawMessage").hide();
     return
-
-}
-
+		}
     $(this).removeClass('free');
     $(this).addClass('played');
     $(this).addClass('X-play');
     $(this).html("X");
-
-
-			Oplay();
-
+		Oplay();
 	});
-
-
-
 
 // reset button to start the game again
 $('#reset-button').on('click', function() {
 	clearBoard();
-	$("#winMessage").hide();
-	$("#loseMessage").hide();
-	$("#drawMessage").hide();
-
-
-})
+	})
 
 
 }); // end document ready
