@@ -11,7 +11,7 @@ const sq8 = $('#square8');
 const sq9 = $('#square9');
 //play vaid is assigning a square
 let playValid = false;
-// winning will be true
+// winning will be false until squares are played
 let win = false;
 
 // asking if we can play tile with X or O

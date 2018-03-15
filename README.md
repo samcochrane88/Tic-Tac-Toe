@@ -13,7 +13,7 @@ To start click within any square.
 
 If you click the link below it will take to you a new tab where you will be able to play tic tac toe.
 
-[Play me](https://samcochrane88.github.io/project0/)
+[Play](https://samcochrane88.github.io/project0/)
 
 #### Built with
 

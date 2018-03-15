@@ -1,24 +1,17 @@
 body {
-			font-family: 'Slabo', sans-serif;
+			font-family: 'Dancing Script', cursive;
 			font-weight: 400;
-			font-size: 12px;
+			font-size: 25px;
+			background-color: 	#cbf6ff;
 		}
 
 .container {
-			max-width: 400px;
-			margin: 2em auto;
-			text-align: center;
-			line-height: 1.5;
-		}
-
-h1 {
+			max-width: 700px;
 			margin: 1em auto;
+			text-align: center;
 		}
 
-a {
-			text-decoration: none;
-			color: pink;
-			font-weight: 700;
+h1 {	font-size: 50px;
 		}
 
 span.red {
@@ -31,22 +24,18 @@ span.blue {
 			font-weight: 700;
 		}
 
-span.pink {
-		color: pink;
-		}
-
 .button {
-			width: 200px;
+			width: 150px;
 			height: 30;
 			border-radius: 5px;
-			padding: 5px;
+			padding: 0px;
 			margin: 0 auto;
 
 			cursor: pointer;
 			text-align: center;
 
 			background-color: blue;
-			font-size: 13px;
+			font-size: 35px;
 			color: #fff;
 		}
 
@@ -54,7 +43,6 @@ span.pink {
 			width: 315px;
 			height: auto;
 			margin: 0 auto;
-
 		}
 
 .tile {
@@ -66,6 +54,7 @@ span.pink {
 			position: relative;
 			vertical-align: top;
 
+
 			padding: 15px;
 			margin-bottom: 5px;
 			box-sizing: border-box;
@@ -76,7 +65,7 @@ span.pink {
 		}
 
 .free {
-			background-color: #999;
+			background-color:		#f7c331
 		}
 
 .O-play {
@@ -90,25 +79,25 @@ span.pink {
 #winMessage {
 	display: none;
 	text-align: center;
-	font-size: 20px;
-	color: blue;
+	font-size: 40px;
+	color: red;
 }
 
 #loseMessage{
 	display: none;
 	text-align: center;
-	font-size: 20px;
-	color: red
+	font-size: 40px;
+	color: blue;
 }
 
 #drawMessage{
 	display: none;
 	text-align: center;
-	font-size: 20px;
+	font-size: 40px;
 }
 
 #playedSquare{
 	display: none;
 	text-align: center;
-	font-size: 20px;
+	font-size: 40px;
 }
