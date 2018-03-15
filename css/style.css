@@ -1,97 +1,41 @@
-/* body {
-
+body {
+			font-family: 'Slabo', sans-serif;
 			font-weight: 400;
 			font-size: 12px;
 		}
+
 .container {
 			max-width: 400px;
 			margin: 2em auto;
 			text-align: center;
 			line-height: 1.5;
 		}
+
 h1 {
-			text-align: center;
-		}
-
-		}
-.button {
-			width: 90px;
-			height: 15px;
-			border-radius: 5px;
-			padding: 5px;
-			margin: 0 auto;
-			cursor: pointer;
-			text-align: center;
-			background-color: pink;
-			font-size: 13px;
-			color: #fff;
-		}
-.tic-tac-toe {
-			width: 315px;
-			height: auto;
-			margin: 0 auto;
-		}
-.tile {
-			height: 100px;
-			width: 100px;
-			display: inline-block;
-			cursor: pointer;
-			position: relative;
-			vertical-align: top;
-			padding: 15px;
-			margin-bottom: 5px;
-			box-sizing: border-box;
-			color: #fff;
-			font-size: 60px;
-			text-align: center;
-		}
-.free {
-			background-color: #999;
-		}
-.O-play {
-			background-color: blue;
-		}
-.X-play {
-			background-color: red;
-		} */
-body {
-			font-family: 'Raleway', sans-serif;
-			font-weight: 400;
-			font-size: 12px;
-		}
-
-		.container {
-			max-width: 400px;
-			margin: 2em auto;
-			text-align: center;
-			line-height: 1.5;
-		}
-
-		h1 {
 			margin: 1em auto;
 		}
 
-		a {
+a {
 			text-decoration: none;
 			color: pink;
 			font-weight: 700;
 		}
 
-		span.red {
+span.red {
 			color: red;
 			font-weight: 700;
 		}
 
-		span.blue {
+span.blue {
 			color: blue;
 			font-weight: 700;
 		}
 
-		span.pink {
-			color: pink;
+span.pink {
+		color: pink;
 		}
 
-		.button {
+.button {
 			width: 200px;
 			height: 30;
 			border-radius: 5px;
@@ -106,14 +50,14 @@ body {
 			color: #fff;
 		}
 
-		.tic-tac-toe {
+.tic-tac-toe {
 			width: 315px;
 			height: auto;
 			margin: 0 auto;
 
 		}
 
-		.tile {
+.tile {
 			height: 100px;
 			width: 100px;
 			display: inline-block;
@@ -131,20 +75,40 @@ body {
 			text-align: center;
 		}
 
-		.free {
+.free {
 			background-color: #999;
 		}
 
-
-		.O-play {
+.O-play {
 			background-color: blue;
 		}
 
-		.X-play {
+.X-play {
 			background-color: red;
 		}
 
-
 #winMessage {
 	display: none;
+	text-align: center;
+	font-size: 50px;
+	color: blue;
+}
+
+#loseMessage{
+	display: none;
+	text-align: center;
+	font-size: 50px;
+	color: red
+}
+
+#drawMessage{
+	display: none;
+	text-align: center;
+	font-size: 50px;
+}
+
+#playedSquare{
+	display: none;
+	text-align: center;
+	font-size: 50px;
 }

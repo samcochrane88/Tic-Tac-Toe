@@ -16,6 +16,7 @@ let win = false;
 function validatePlay(squareplayed) {
 	if ( $(squareplayed).hasClass('free') ) {
 		playValid = true;
+		$("#playedSquare").hide();
 	} else {
 		playValid = false;
 		return false;
@@ -34,9 +35,9 @@ function winAlert(player) {
 	win = true;
 	if (player === "X") {
 		$("#winMessage").show();
-		//alert("Congratulations, you beat the computer!")
 	} else {
-		alert("You lost!")
+	win = false;
+		$("#loseMessage").show();
 	}
 }
 
@@ -93,7 +94,7 @@ function checkWin() {
 
 function checkDraw() {
 	if ( !($('.tile').hasClass('free')) ) {
-			alert("Draw! Try playing again!");
+			$("#drawMessage").show();
 	}
 }
 
@@ -109,6 +110,7 @@ function Oplay() {
 			square.addClass('played');
 			square.addClass('O-play');
 			square.html("O");
+
 		}
 	}
 
@@ -250,7 +252,7 @@ function Oplay() {
 
 $('.tile').on('click', function Xplay() {
   if ($(this).html() === 'X' || $(this).html() === 'O' ) {
-    alert('Square has already been played')
+		$("#playedSquare").show();
     return
 
 }
@@ -271,6 +273,11 @@ $('.tile').on('click', function Xplay() {
 
 $('#reset-button').on('click', function() {
 	clearBoard();
+	$("#winMessage").hide();
+	$("#loseMessage").hide();
+	$("#drawMessage").hide();
+
+
 })
 
 
